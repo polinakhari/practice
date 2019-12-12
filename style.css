@@ -9,8 +9,9 @@ h2{
     margin: 0;
 }
 .wrapper{
-    width: 1170px;
-    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 100px;
     margin: 0 auto;
 }
 .header{
@@ -19,6 +20,9 @@ h2{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;    
+}
+.logo{
+    max-width: 100%;
 }
 .book{
     background: #0d87ff;
@@ -33,14 +37,20 @@ h2{
     border: none;
     text-decoration: none;
     outline: none;
+    max-width: 100%;
 }
-.banner{
-    background: url(img/01.png) no-repeat center;
-    background-position-y: 0;
-    width: 100%;
-    height: 400px;
-    margin-top: 30px;
-    margin-bottom: 65px;
+.book2{
+    display: none;
+}
+.banner{    
+    width: 100%;  
+    max-width: 901px;
+    max-height: 401px;
+    margin-top: 40px;
+    margin-bottom: 40px;    
+    align-self: center; 
+      
+
 }
 .main{
     display: flex;
@@ -91,15 +101,18 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 10px;
     padding-bottom: 20px;
 }
 .props-item p{
     position: relative;
     padding-bottom: 8px;
     font-weight: 300;
+    text-align: center;
 }
 .props-item h2{
     padding: 10px 0 15px;
+    text-align: center;
 }
 .annotation-item{
     position: relative;
@@ -139,14 +152,67 @@ h2{
     font-size: 14px;
     line-height: 23px;
     color: #fff;
-    padding: 6px 10px 7px;
+    padding: 16px 10px 16px;
     font-weight: 500;
     text-align: center;    
     cursor: pointer;
     border: none;
     text-decoration: none;
     outline: none;
-    width: 50%;
+    width: 60%;
     align-self: center;
     margin: 25px 0 45px;    
 }
+
+  @media (max-width: 768px) {
+    .wrapper{        
+        padding: 0 20px;
+        
+    }
+    .props{
+        flex-direction: column;
+    }
+    .props-item{
+        width: 100%;
+    }
+    .props-item{
+        border: none;
+    }
+    
+}
+@media (max-width: 600px){
+    .header{
+        flex-direction: column;
+
+    }
+    .logo{
+        margin-bottom: 0px;
+    }
+    .banner{
+        margin-top: 20px;
+        margin-bottom: 20px; 
+        
+    }
+    .book{
+        display: none;
+    }
+    .book2{
+        display: block;
+        margin-bottom: 40px;
+    }
+}
+    @media (max-width: 320px) {
+        .wrapper{            
+            padding: 0 20px;
+            
+        }
+        .header{
+            flex-direction: column;
+        }        
+        .link{
+            width: 100%;
+        }
+        .logo{
+            margin-bottom: 30px;
+        }
+  }
